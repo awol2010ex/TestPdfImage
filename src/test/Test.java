@@ -18,7 +18,7 @@ import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfObject;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfImageObject;
-
+//扫码二维码信息
 public class Test {
 
 	public static void main(String[] args) throws IOException,
