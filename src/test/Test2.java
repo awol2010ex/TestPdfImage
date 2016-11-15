@@ -91,14 +91,14 @@ public class Test2 {
 				// TODO Auto-generated method stub
 				Object[] obj1 = (Object[]) o1;
 				Object[] obj2 = (Object[]) o2;
-				if ((float) obj1[1] < (float) obj2[1]) {
+				if ((Float) obj1[1] < (Float) obj2[1]) {
 					return 1;
-				} else if ((float) obj1[1] > (float) obj2[1]) {
+				} else if ((Float) obj1[1] > (Float) obj2[1]) {
 					return -1;
-				} else if ((float) obj1[1] == (float) obj2[1]) {
-					if ((float) obj1[0] < (float) obj2[0]) {
+				} else if ((Float) obj1[1] == (Float) obj2[1]) {
+					if ((Float) obj1[0] < (Float) obj2[0]) {
 						return 1;
-					} else if ((float) obj1[0] > (float) obj2[0]) {
+					} else if ((Float) obj1[0] > (Float) obj2[0]) {
 						return -1;
 					}
 				}
@@ -108,20 +108,20 @@ public class Test2 {
 		List<String> nameList =new ArrayList<String>();
 		for (int i=0,s=list.size();i<s;i++) {
 		  Object[] obj =list.get(i);
-          float x =(float)obj[0];
-          float y =(float)obj[1];
+          float x =(Float)obj[0];
+          float y =(Float)obj[1];
           String text =((String) obj[2]).trim();
           //System.out.println(x+","+y+","+text);
         
           if("名".equals(text)){
         	     String lasttext = ((String)list.get(i-1)[2]).trim();
-        	     float lastx =(float)list.get(i-1)[0];
+        	     float lastx =(Float)list.get(i-1)[0];
         	     if("称".equals(lasttext)){
         	    	    for( int k=i-10; k<i+10 ;k++  ){
         	    	    	if(k!=i-1){
         	    	    	   Object[] t =list.get(k);
         	    	    	   String temptext =((String)t[2]).trim();
-        	    	    	   if(  !"".equals(temptext) && isChineseByREG(temptext)  &&  (float)t[0]>x &&  Math.abs((float)t[0]-lastx)<20   &&  Math.abs(y-(float)t[1])<10      ){
+        	    	    	   if(  !"".equals(temptext) && isChineseByREG(temptext)  &&  (Float)t[0]>lastx&&  Math.abs((Float)t[0]-lastx)<20   &&  Math.abs(y-(Float)t[1])<10      ){
         	    	    		   nameList.add(temptext);
         	    	    		   break ;
         	    	    	   }
